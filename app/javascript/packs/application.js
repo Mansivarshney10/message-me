@@ -10,15 +10,15 @@ import "channels"
 import '@doabit/semantic-ui-sass'
 import "jquery"
 
-window.scroll_bottom = function(){
+scroll_bottom = function(){
     if ($('#messages').length > 0) {
       $('#messages').scrollTop($('#messages')[0].scrollHeight);
     }
   }
   
-  window.submit_message = function() {
+submit_message = function() {
     $('#message_body').on('keydown', function(e) {
-      if (e.keyCode == 13) {
+      if (e.key == 'Enter') {
         $('button').click();
         e.target.value = "";
       };
